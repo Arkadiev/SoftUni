@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Elevator", "03.Elevator\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SumOfChars", "04.SumOfChars\04.SumOfChars.csproj", "{5D54A98B-FDB2-4181-99E1-32CE0CA2A3CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.PrintPartOfASCIITable", "05.PrintPartOfASCIITable\05.PrintPartOfASCIITable.csproj", "{F88611EF-5D53-4E27-B275-3E577AEC1BF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5D54A98B-FDB2-4181-99E1-32CE0CA2A3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D54A98B-FDB2-4181-99E1-32CE0CA2A3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D54A98B-FDB2-4181-99E1-32CE0CA2A3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88611EF-5D53-4E27-B275-3E577AEC1BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88611EF-5D53-4E27-B275-3E577AEC1BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88611EF-5D53-4E27-B275-3E577AEC1BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88611EF-5D53-4E27-B275-3E577AEC1BF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
