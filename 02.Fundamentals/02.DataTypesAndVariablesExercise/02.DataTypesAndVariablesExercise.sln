@@ -13,15 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.SumOfChars", "04.SumOfCh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.PrintPartOfASCIITable", "05.PrintPartOfASCIITable\05.PrintPartOfASCIITable.csproj", "{F88611EF-5D53-4E27-B275-3E577AEC1BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.TriplesOfLatinLetters", "06.TriplesOfLatinLetters\06.TriplesOfLatinLetters.csproj", "{E597B31D-B6E8-426F-BD64-3E60B1AD10AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.TriplesOfLatinLetters", "06.TriplesOfLatinLetters\06.TriplesOfLatinLetters.csproj", "{E597B31D-B6E8-426F-BD64-3E60B1AD10AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.WaterOverflow", "07.WaterOverflow\07.WaterOverflow.csproj", "{42604ADC-1569-4681-8326-E42D99372382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.WaterOverflow", "07.WaterOverflow\07.WaterOverflow.csproj", "{42604ADC-1569-4681-8326-E42D99372382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.BeerKegs", "08.BeerKegs\08.BeerKegs.csproj", "{B09EEEC6-3850-4173-B075-FC102A1915E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.BeerKegs", "08.BeerKegs\08.BeerKegs.csproj", "{B09EEEC6-3850-4173-B075-FC102A1915E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SpiceMustFlow", "09.SpiceMustFlow\09.SpiceMustFlow.csproj", "{B15E42CD-7E93-4256-B75C-52609C016D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.SpiceMustFlow", "09.SpiceMustFlow\09.SpiceMustFlow.csproj", "{B15E42CD-7E93-4256-B75C-52609C016D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.PokeMon", "10.PokeMon\10.PokeMon.csproj", "{E8D5C908-AD43-49DF-A107-792B884BF115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.PokeMon", "10.PokeMon\10.PokeMon.csproj", "{E8D5C908-AD43-49DF-A107-792B884BF115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Snowballs", "11.Snowballs\11.Snowballs.csproj", "{716B8FEC-311F-4C65-899A-DCA2FE39F739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{E8D5C908-AD43-49DF-A107-792B884BF115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8D5C908-AD43-49DF-A107-792B884BF115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8D5C908-AD43-49DF-A107-792B884BF115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716B8FEC-311F-4C65-899A-DCA2FE39F739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716B8FEC-311F-4C65-899A-DCA2FE39F739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716B8FEC-311F-4C65-899A-DCA2FE39F739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716B8FEC-311F-4C65-899A-DCA2FE39F739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+﻿namespace _11.Snowballs
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+
+
+
+
+        }
+    }
+}
