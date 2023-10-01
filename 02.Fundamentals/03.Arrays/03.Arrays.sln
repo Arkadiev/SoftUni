@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.DayOfWeek", "01.DayOfWeek\01.DayOfWeek.csproj", "{99F40C5A-EDD7-481B-8B83-53EA13AC13D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.PrintNumbersInReverseOrder", "02.PrintNumbersInReverseOrder\02.PrintNumbersInReverseOrder.csproj", "{111CCC31-2933-44E6-A90B-2240EB4ECF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.PrintNumbersInReverseOrder", "02.PrintNumbersInReverseOrder\02.PrintNumbersInReverseOrder.csproj", "{111CCC31-2933-44E6-A90B-2240EB4ECF6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.RoundingNumbers", "03.RoundingNumbers\03.RoundingNumbers.csproj", "{14569173-3DDB-4B35-ABCB-3A1BDB325482}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{111CCC31-2933-44E6-A90B-2240EB4ECF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111CCC31-2933-44E6-A90B-2240EB4ECF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111CCC31-2933-44E6-A90B-2240EB4ECF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14569173-3DDB-4B35-ABCB-3A1BDB325482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14569173-3DDB-4B35-ABCB-3A1BDB325482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14569173-3DDB-4B35-ABCB-3A1BDB325482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14569173-3DDB-4B35-ABCB-3A1BDB325482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
