@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Train", "01.Train\01.Train.csproj", "{896D6BE2-CCC2-4529-89A6-DBFEE4AB9228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Train", "01.Train\01.Train.csproj", "{896D6BE2-CCC2-4529-89A6-DBFEE4AB9228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CommonElements", "02.CommonElements\02.CommonElements.csproj", "{D31CE146-D78E-40DE-9CCD-4635BF42F752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Zig-ZagArrays", "03.Zig-ZagArrays\03.Zig-ZagArrays.csproj", "{5771AD23-29A9-4EC7-AD35-F18470DE84DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ArrayRotation", "04.ArrayRotation\04.ArrayRotation.csproj", "{4E5D6085-5B12-447B-BD0E-7A5F774CE270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{896D6BE2-CCC2-4529-89A6-DBFEE4AB9228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{896D6BE2-CCC2-4529-89A6-DBFEE4AB9228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{896D6BE2-CCC2-4529-89A6-DBFEE4AB9228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31CE146-D78E-40DE-9CCD-4635BF42F752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31CE146-D78E-40DE-9CCD-4635BF42F752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31CE146-D78E-40DE-9CCD-4635BF42F752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31CE146-D78E-40DE-9CCD-4635BF42F752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5771AD23-29A9-4EC7-AD35-F18470DE84DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5771AD23-29A9-4EC7-AD35-F18470DE84DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5771AD23-29A9-4EC7-AD35-F18470DE84DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5771AD23-29A9-4EC7-AD35-F18470DE84DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5D6085-5B12-447B-BD0E-7A5F774CE270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5D6085-5B12-447B-BD0E-7A5F774CE270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5D6085-5B12-447B-BD0E-7A5F774CE270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5D6085-5B12-447B-BD0E-7A5F774CE270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
