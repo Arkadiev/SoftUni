@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.GuineaPig", "01.GuineaPig\01.GuineaPig.csproj", "{BA1BB3D9-5FA8-46B0-A5BB-45A50017375F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TheLift", "02.TheLift\02.TheLift.csproj", "{3AB82253-F961-40BA-805E-FED6C2D2613A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA1BB3D9-5FA8-46B0-A5BB-45A50017375F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1BB3D9-5FA8-46B0-A5BB-45A50017375F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1BB3D9-5FA8-46B0-A5BB-45A50017375F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1BB3D9-5FA8-46B0-A5BB-45A50017375F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB82253-F961-40BA-805E-FED6C2D2613A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB82253-F961-40BA-805E-FED6C2D2613A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB82253-F961-40BA-805E-FED6C2D2613A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB82253-F961-40BA-805E-FED6C2D2613A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AAA506A-CEC4-4511-824A-0B8BA04D0329}
+	EndGlobalSection
+EndGlobal
