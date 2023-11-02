@@ -1,12 +1,16 @@
-﻿namespace _04.Students
+﻿using static _04.Students2.Program;
+
+namespace _04.Students2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+
+            string input = default;
+
             List<Student> students = new List<Student>();
 
-            string input;
             while ((input = Console.ReadLine()) != "end")
             {
                 string[] tokens = input.Split();
@@ -21,6 +25,15 @@
                 student.Age = age;
                 student.HomeTown = homeTown;
 
+                int index = ValidateStudent(firstName, lastName, students);
+
+                if (index != -1)
+                {
+                    students[index].Age = age;
+                    students[index].HomeTown = homeTown;
+                    continue;
+                }
+
                 students.Add(student);
             }
 
@@ -34,12 +47,24 @@
                 }
             }
 
+        }
 
+        static int ValidateStudent(string firstName, string lastName, List<Student> students)
+        {
+            for (int i = 0; i < students.Count; i++)
+            {
+                if (students[i].FirstName == firstName && students[i].LastName == lastName)
+                {
+                    return i;
+                }
+            }
+                
+            return -1;
         }
 
         public class Student
         {
-            
+
             public string FirstName { get; set; }
 
             public string LastName { get; set; }
