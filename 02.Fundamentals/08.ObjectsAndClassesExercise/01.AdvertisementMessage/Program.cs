@@ -44,7 +44,6 @@ namespace _01.AdvertisementMessage
 
                 Console.WriteLine($"{phrases} {e} {authors} - {cities}");
             }
-
         }
     }
 
