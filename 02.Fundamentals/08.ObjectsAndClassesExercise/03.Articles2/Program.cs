@@ -8,9 +8,9 @@ namespace _02.Articles
         {
             List<Article> articles = new List<Article>();
 
-            int commandCount = int.Parse(Console.ReadLine());
+            int articleCount = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < commandCount; i++)
+            for (int i = 0; i < articleCount; i++)
             {
                 string[] input = Console.ReadLine().Split(", ").ToArray();
 
