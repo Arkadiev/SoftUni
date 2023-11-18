@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ValidUsernames", "01.ValidUsernames\01.ValidUsernames.csproj", "{257F9118-BE4E-4EF2-81B7-3E60C973E19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ValidUsernames", "01.ValidUsernames\01.ValidUsernames.csproj", "{257F9118-BE4E-4EF2-81B7-3E60C973E19F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CharacterMultiplier", "02.CharacterMultiplier\02.CharacterMultiplier.csproj", "{4A0ED2D2-714A-44E3-85EB-3BAD06B392E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CharacterMultiplier", "02.CharacterMultiplier\02.CharacterMultiplier.csproj", "{4A0ED2D2-714A-44E3-85EB-3BAD06B392E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ExtractFile", "03.ExtractFile\03.ExtractFile.csproj", "{55AC30EE-A308-492B-ACD5-73D72F3B8677}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ExtractFile", "03.ExtractFile\03.ExtractFile.csproj", "{55AC30EE-A308-492B-ACD5-73D72F3B8677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CaesarCipher", "04.CaesarCipher\04.CaesarCipher.csproj", "{8DAABC30-0F34-4DD1-B5E7-2D5051F6DD00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.CaesarCipher", "04.CaesarCipher\04.CaesarCipher.csproj", "{8DAABC30-0F34-4DD1-B5E7-2D5051F6DD00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MultiplyBigNumber", "05.MultiplyBigNumber\05.MultiplyBigNumber.csproj", "{18BA7C29-B13F-4A96-B84E-FC1E0C771BFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.MultiplyBigNumber", "05.MultiplyBigNumber\05.MultiplyBigNumber.csproj", "{18BA7C29-B13F-4A96-B84E-FC1E0C771BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.ReplaceRepeatingChars", "06.ReplaceRepeatingChars\06.ReplaceRepeatingChars.csproj", "{C16C09D1-22AF-4804-9B1C-EC7F88E7ACEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{18BA7C29-B13F-4A96-B84E-FC1E0C771BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18BA7C29-B13F-4A96-B84E-FC1E0C771BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18BA7C29-B13F-4A96-B84E-FC1E0C771BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16C09D1-22AF-4804-9B1C-EC7F88E7ACEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16C09D1-22AF-4804-9B1C-EC7F88E7ACEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16C09D1-22AF-4804-9B1C-EC7F88E7ACEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16C09D1-22AF-4804-9B1C-EC7F88E7ACEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
