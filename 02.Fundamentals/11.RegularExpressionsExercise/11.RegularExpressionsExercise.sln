@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Furniture", "01.Furniture\01.Furniture.csproj", "{DB1AB7A5-8E4C-4AFC-94BE-8C7B184FF9ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Race", "02.Race\02.Race.csproj", "{50BFDF49-B9D5-4757-A57B-5DA8F3D0739F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SoftUniBarIncome", "03.SoftUniBarIncome\03.SoftUniBarIncome.csproj", "{875D0988-DF77-4973-A439-0070B390B784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DB1AB7A5-8E4C-4AFC-94BE-8C7B184FF9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB1AB7A5-8E4C-4AFC-94BE-8C7B184FF9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB1AB7A5-8E4C-4AFC-94BE-8C7B184FF9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50BFDF49-B9D5-4757-A57B-5DA8F3D0739F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50BFDF49-B9D5-4757-A57B-5DA8F3D0739F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50BFDF49-B9D5-4757-A57B-5DA8F3D0739F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50BFDF49-B9D5-4757-A57B-5DA8F3D0739F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875D0988-DF77-4973-A439-0070B390B784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875D0988-DF77-4973-A439-0070B390B784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875D0988-DF77-4973-A439-0070B390B784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875D0988-DF77-4973-A439-0070B390B784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
