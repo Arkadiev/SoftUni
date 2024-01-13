@@ -44,14 +44,7 @@
                 }
                 else if (command.Equals("End", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    int sum = 0;
-
-                    while (numbers.Count != 0)
-                    {
-                        sum += numbers.Pop();
-                    }
-
-                    Console.WriteLine($"Sum: {sum}");
+                    Console.WriteLine($"Sum: {numbers.Sum()}");
 
                     break;
                 }
