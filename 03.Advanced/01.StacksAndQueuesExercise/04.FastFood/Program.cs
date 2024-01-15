@@ -9,24 +9,21 @@
             int[] orders = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
             Queue<int> queue = new Queue<int>(orders);
-            
-            int sum = 0;
 
-            Console.WriteLine(queue.Max());
-
-            while (queue.Count > 0)
+            if (queue.Any())
             {
-                int currentNumber = queue.Peek();
-                sum += currentNumber;
-
-                if (sum <= quantity)
+                Console.WriteLine(queue.Max());
+            }
+            
+            while (queue.Any())
+            {
+                if (quantity >= queue.Peek())
                 {
-                    queue.Dequeue();
+                    quantity -= queue.Dequeue();
                 }
                 else
                 {
-                    int[] arr = queue.ToArray();
-                    Console.WriteLine($"Orders left: " + string.Join(" ", arr));
+                    Console.WriteLine($"Orders left: {string.Join(' ', queue)}");
                     return;
                 }
             }

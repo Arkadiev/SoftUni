@@ -7,41 +7,26 @@
             int n = int.Parse(Console.ReadLine());
 
             Stack<int> stack = new Stack<int>();
-            List<int> list = new List<int>();
 
             for (int i = 0; i < n; i++)
             {
                 int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-                int command = input[0];
-
-                if (command == 1)
+                if (input[0] == 1)
                 {
-                    int number = input[1];
-                    stack.Push(number);
+                    stack.Push(input[1]);
                 }
-                else if (command == 2)
+                else if (input[0] == 2)
                 {
-                    if (stack.Count > 0)
-                    {
-                        stack.Pop();
-                    }
+                    stack.Pop();
                 }
-                else if (command == 3)
+                else if (input[0] == 3 && stack.Any())
                 {
-                    if (stack.Count > 0)
-                    {
-                        list = stack.OrderBy(x => x).ToList();
-                        Console.WriteLine(list[list.Count - 1]);
-                    }
+                    Console.WriteLine(stack.Max());
                 }
-                else // 4
+                else if (input[0] == 4 && stack.Any())
                 {
-                    if (stack.Count > 0)
-                    {
-                        list = stack.OrderBy(x => x).ToList();
-                        Console.WriteLine(list[0]);
-                    }
+                    Console.WriteLine(stack.Min());
                 }
             }
 

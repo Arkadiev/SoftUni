@@ -4,11 +4,9 @@
     {
         static void Main(string[] args)
         {
-            string[] input = Console.ReadLine().Split();
+            int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            int n = int.Parse(input[0]);
-            int s = int.Parse(input[1]);
-            int x = int.Parse(input[2]);
+            int n = input[0], s = input[1], x = input[2];
 
             string[] numbers = Console.ReadLine().Split();
 
@@ -25,39 +23,17 @@
                 queue.Dequeue();
             }
 
-            bool isFound = false;
-            int otherNum;
-
-            if (queue.Count == 0)
-            {
-                otherNum = 0;
-            }
-            else
-            {
-                otherNum = int.MaxValue;
-            }
-
-            while (queue.Count > 0)
-            {
-                int currentNum = queue.Dequeue();
-
-                if (currentNum == x)
-                {
-                    isFound = true;
-                }
-                else if (currentNum < otherNum)
-                {
-                    otherNum = currentNum;
-                }
-            }
-
-            if (isFound == true)
+            if (queue.Contains(x))
             {
                 Console.WriteLine("true");
             }
+            else if (queue.Any())
+            {
+                Console.WriteLine(queue.Min());
+            }
             else
             {
-                Console.WriteLine(otherNum);
+                Console.WriteLine(0);
             }
         }
     }
