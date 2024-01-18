@@ -1,4 +1,4 @@
-﻿namespace _03.PrimaryDiagonal
+﻿namespace _04.SymbolInMatrix
 {
     internal class Program
     {
@@ -9,13 +9,11 @@
             int rows = input;
             int cols = input;
 
-            int diagonalSum = 0;
-
-            int[,] matrix = new int[rows, cols];
+            char[,] matrix = new char[rows, cols];
 
             for (int row = 0; row < rows; row++)
             {
-                int[] rowArray = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+                char[] rowArray = Console.ReadLine().ToCharArray();
 
                 for (int col = 0; col < cols; col++)
                 {
@@ -23,19 +21,26 @@
                 }
             }
 
+            char symbol = char.Parse(Console.ReadLine());
+            bool isFound = false;
+
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    if (row == col)
+                    if (matrix[row,col] == symbol)
                     {
-                        diagonalSum += matrix[row, col];
+                        Console.WriteLine($"({row}, {col})");
+                        isFound = true;
+                        return;
                     }
                 }
             }
 
-            Console.WriteLine(diagonalSum);
-            return;
+            if (!isFound)
+            {
+                Console.WriteLine($"{symbol} does not occur in the matrix");
+            }
         }
     }
 }
