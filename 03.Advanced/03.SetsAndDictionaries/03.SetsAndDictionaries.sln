@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CountSameValuesInArray", "01.CountSameValuesInArray\01.CountSameValuesInArray.csproj", "{8AD3B7A9-1714-4192-8241-67D7712F4285}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Largest3Numbers", "03.Largest3Numbers\03.Largest3Numbers.csproj", "{D6AD2418-322D-4DE6-9769-DF2A4E2ADAE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8AD3B7A9-1714-4192-8241-67D7712F4285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AD3B7A9-1714-4192-8241-67D7712F4285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AD3B7A9-1714-4192-8241-67D7712F4285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AD2418-322D-4DE6-9769-DF2A4E2ADAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AD2418-322D-4DE6-9769-DF2A4E2ADAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AD2418-322D-4DE6-9769-DF2A4E2ADAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AD2418-322D-4DE6-9769-DF2A4E2ADAE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
