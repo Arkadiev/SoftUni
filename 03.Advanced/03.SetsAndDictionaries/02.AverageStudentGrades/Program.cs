@@ -15,7 +15,6 @@
                 if (!grades.ContainsKey(input[0]))
                 {
                     grades.Add(input[0], new List<decimal>());
-
                 }
 
                 grades[input[0]].Add(decimal.Parse(input[1]));
