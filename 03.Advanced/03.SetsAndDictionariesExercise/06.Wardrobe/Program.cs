@@ -45,12 +45,10 @@
 
                     if (searchInput[0] == color.Key && searchInput[1] == item.Key)
                     {
-                        Console.WriteLine(" (found!)");
+                        Console.Write(" (found!)");
                     }
-                    else
-                    {
-                        Console.WriteLine();
-                    }
+
+                    Console.WriteLine();
                 }
             }
         }
