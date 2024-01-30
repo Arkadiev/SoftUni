@@ -1,6 +1,10 @@
 ﻿namespace DirectoryTraversal
 {
     using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     public class DirectoryTraversal
     {
         static void Main()
@@ -8,20 +12,47 @@
             string path = Console.ReadLine();
             string reportFileName = @"\report.txt";
 
-            string reportContent = TraverseDirectory(path);
+            var reportContent = TraverseDirectory(path);
             Console.WriteLine(reportContent);
 
             WriteReportToDesktop(reportContent, reportFileName);
         }
 
-        public static string TraverseDirectory(string inputFolderPath)
+        public static Dictionary<string, List<FileInfo>> TraverseDirectory(string inputFolderPath)
         {
-            throw new NotImplementedException();
+            Dictionary<string, List<FileInfo>> fileDictionary = new();
+
+            string[] files = Directory.GetFiles(inputFolderPath);
+
+            foreach (string file in files)
+            {
+                FileInfo info = new FileInfo(file);
+                string extension = info.Extension;
+
+                if (!fileDictionary.ContainsKey(file))
+                {
+                    fileDictionary.Add(extension, new List<FileInfo>());
+                }
+
+                fileDictionary[extension].Add(info);
+            }
+
+            return fileDictionary;
         }
 
-        public static void WriteReportToDesktop(string textContent, string reportFileName)
+        public static void WriteReportToDesktop(Dictionary<string, List<FileInfo>> fileDictionary, string reportFileName)
         {
-            throw new NotImplementedException();
+            using StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + reportFileName);
+
+            foreach (var item in fileDictionary.OrderByDescending(x => x.Value.Count))
+            {
+                writer.WriteLine($"{item.Key}");
+
+                foreach (var file in item.Value.OrderBy(x => x.Length))
+                {
+                    writer.WriteLine($"--{file.Name} - {(double)file.Length / 1024}kb");
+                }
+            }
         }
     }
 }
