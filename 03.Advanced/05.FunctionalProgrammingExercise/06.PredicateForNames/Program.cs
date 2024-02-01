@@ -1,4 +1,4 @@
-﻿namespace _06.PredicateForNames
+﻿namespace _07.PredicateForNames
 {
     internal class Program
     {
@@ -8,9 +8,9 @@
 
             string[] names = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-            Predicate<string> predicate = x => x.Length <= length;
+            Func<string, int, bool> predicate = (x, i) => x.Length <= i;
 
-            var result = names.Where(name => predicate(name));
+            var result = names.Where(name => predicate(name, length));
 
             foreach (string name in result)
             {
