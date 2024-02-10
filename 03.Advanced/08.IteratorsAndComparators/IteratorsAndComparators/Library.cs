@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IteratorsAndComparators
 {
-    internal class Library : IEnumerable<Book>
+    public class Library : IEnumerable<Book>
     {
         private List<Book> books;
 
@@ -18,7 +18,7 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            return new LibraryIterator(books);
+            return new LibraryIterator(books.OrderBy(b => b).ToList());
         }
 
         IEnumerator IEnumerable.GetEnumerator()
