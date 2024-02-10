@@ -18,7 +18,7 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            return new LibraryIterator(books.OrderBy(b => b).ToList());
+            return new LibraryIterator(books.OrderBy(b => b, new BookComparator()).ToList());
         }
 
         IEnumerator IEnumerable.GetEnumerator()
