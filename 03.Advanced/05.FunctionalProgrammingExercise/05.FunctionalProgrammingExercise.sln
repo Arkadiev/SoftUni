@@ -7,19 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ActionPrint", "01.Action
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.KnightsOfHonor", "02.KnightsOfHonor\02.KnightsOfHonor.csproj", "{9AA0DFE6-91B8-430D-8698-BE95D68EF406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CustomMinFunction", "03.CustomMinFunction\03.CustomMinFunction.csproj", "{0D893F8C-EEC2-4975-83E4-3A79EA7D3E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.CustomMinFunction", "03.CustomMinFunction\03.CustomMinFunction.csproj", "{0D893F8C-EEC2-4975-83E4-3A79EA7D3E88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FindEvensOrOdds", "04.FindEvensOrOdds\04.FindEvensOrOdds.csproj", "{E067A8B6-5390-4501-9CB5-A55D2C0A0251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.FindEvensOrOdds", "04.FindEvensOrOdds\04.FindEvensOrOdds.csproj", "{E067A8B6-5390-4501-9CB5-A55D2C0A0251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.AppliedArithmetics", "05.AppliedArithmetics\05.AppliedArithmetics.csproj", "{31280AF5-3464-4EFA-8776-AB3BFCC5C840}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.AppliedArithmetics", "05.AppliedArithmetics\05.AppliedArithmetics.csproj", "{31280AF5-3464-4EFA-8776-AB3BFCC5C840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.ReverseAndExclude", "06.ReverseAndExclude\06.ReverseAndExclude.csproj", "{11550682-4CBA-4F53-B744-E42728A15E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.ReverseAndExclude", "06.ReverseAndExclude\06.ReverseAndExclude.csproj", "{11550682-4CBA-4F53-B744-E42728A15E3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.PredicateForNames", "06.PredicateForNames\07.PredicateForNames.csproj", "{81A7A1D9-AE8D-43E8-B3F9-39C421CAB7A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.PredicateForNames", "06.PredicateForNames\07.PredicateForNames.csproj", "{81A7A1D9-AE8D-43E8-B3F9-39C421CAB7A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ListOfPredicates", "08.ListOfPredicates\08.ListOfPredicates.csproj", "{78A0452C-A83B-46A4-A8F8-97D10DC4F325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.ListOfPredicates", "08.ListOfPredicates\08.ListOfPredicates.csproj", "{78A0452C-A83B-46A4-A8F8-97D10DC4F325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.PredicateParty", "09.PredicateParty\09.PredicateParty.csproj", "{B08587DC-28C5-4E6F-8CA7-A82C95784B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.PredicateParty", "09.PredicateParty\09.PredicateParty.csproj", "{B08587DC-28C5-4E6F-8CA7-A82C95784B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.ThePartyReservationFilterModule", "10.ThePartyReservationFilterModule\10.ThePartyReservationFilterModule.csproj", "{C9918B8C-E836-43F1-8773-C42A85185D18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.TriFunction", "11.TriFunction\11.TriFunction.csproj", "{1900A8ED-2F2B-4426-B716-0E414E3BFDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{B08587DC-28C5-4E6F-8CA7-A82C95784B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08587DC-28C5-4E6F-8CA7-A82C95784B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08587DC-28C5-4E6F-8CA7-A82C95784B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9918B8C-E836-43F1-8773-C42A85185D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9918B8C-E836-43F1-8773-C42A85185D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9918B8C-E836-43F1-8773-C42A85185D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9918B8C-E836-43F1-8773-C42A85185D18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1900A8ED-2F2B-4426-B716-0E414E3BFDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1900A8ED-2F2B-4426-B716-0E414E3BFDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1900A8ED-2F2B-4426-B716-0E414E3BFDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1900A8ED-2F2B-4426-B716-0E414E3BFDD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

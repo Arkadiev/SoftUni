@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SquaresInMatrix", "02.Sq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MaximalSum", "03.MaximalSum\03.MaximalSum.csproj", "{C524A5DC-AE6D-49B4-806B-B8BCF634ECEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MatrixShuffling", "04.MatrixShuffling\04.MatrixShuffling.csproj", "{399C8A42-1E00-4B32-9415-7FFFD33CC699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MatrixShuffling", "04.MatrixShuffling\04.MatrixShuffling.csproj", "{399C8A42-1E00-4B32-9415-7FFFD33CC699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SnakeMoves", "05.SnakeMoves\05.SnakeMoves.csproj", "{5A09DAE9-8DC8-4387-BFBD-CDAC38C8D888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.SnakeMoves", "05.SnakeMoves\05.SnakeMoves.csproj", "{5A09DAE9-8DC8-4387-BFBD-CDAC38C8D888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.JaggedArrayManipulator", "06.JaggedArrayManipulator\06.JaggedArrayManipulator.csproj", "{213A3E6B-83DF-4165-A91A-304F4DE912CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.JaggedArrayManipulator", "06.JaggedArrayManipulator\06.JaggedArrayManipulator.csproj", "{213A3E6B-83DF-4165-A91A-304F4DE912CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.KnightGame", "07.KnightGame\07.KnightGame.csproj", "{13373B15-2F39-4E8B-B89B-D173909EDDF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{213A3E6B-83DF-4165-A91A-304F4DE912CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213A3E6B-83DF-4165-A91A-304F4DE912CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{213A3E6B-83DF-4165-A91A-304F4DE912CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13373B15-2F39-4E8B-B89B-D173909EDDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13373B15-2F39-4E8B-B89B-D173909EDDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13373B15-2F39-4E8B-B89B-D173909EDDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13373B15-2F39-4E8B-B89B-D173909EDDF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
