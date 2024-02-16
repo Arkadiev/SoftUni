@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.OffroadChallenge", "01.OffroadChallenge\01.OffroadChallenge.csproj", "{F4C9657B-792A-4892-A5C6-6054FFA562D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.FishingCompetition", "02.FishingCompetition\02.FishingCompetition.csproj", "{33BF539D-4BC8-450D-8375-CE4983601DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MailClient", "03.MailClient\03.MailClient.csproj", "{1C718E7D-D002-4D1B-8119-5B29767B356C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F4C9657B-792A-4892-A5C6-6054FFA562D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C9657B-792A-4892-A5C6-6054FFA562D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C9657B-792A-4892-A5C6-6054FFA562D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BF539D-4BC8-450D-8375-CE4983601DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BF539D-4BC8-450D-8375-CE4983601DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BF539D-4BC8-450D-8375-CE4983601DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BF539D-4BC8-450D-8375-CE4983601DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C718E7D-D002-4D1B-8119-5B29767B356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C718E7D-D002-4D1B-8119-5B29767B356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C718E7D-D002-4D1B-8119-5B29767B356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C718E7D-D002-4D1B-8119-5B29767B356C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
