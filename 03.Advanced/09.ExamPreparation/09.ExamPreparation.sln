@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.TempleOfDoom", "04.Templ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MouseInTheKitchen", "05.MouseInTheKitchen\05.MouseInTheKitchen.csproj", "{8E3423BC-A3E4-4469-9BC4-608B41D58901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AutomotiveRepairShop", "06.AutomotiveRepairShop\06.AutomotiveRepairShop.csproj", "{3B8607A7-8A3A-4C1C-A3B9-C330FE11F9C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8E3423BC-A3E4-4469-9BC4-608B41D58901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3423BC-A3E4-4469-9BC4-608B41D58901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3423BC-A3E4-4469-9BC4-608B41D58901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8607A7-8A3A-4C1C-A3B9-C330FE11F9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8607A7-8A3A-4C1C-A3B9-C330FE11F9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8607A7-8A3A-4C1C-A3B9-C330FE11F9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8607A7-8A3A-4C1C-A3B9-C330FE11F9C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
