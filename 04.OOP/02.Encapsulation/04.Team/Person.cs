@@ -46,29 +46,13 @@
         public int Age
         {
             get => age;
-            private set
-            { 
-                if (age <= 0)
-                {
-                    throw new ArgumentException("Age cannot be zero or a negative integer!");
-                }
-                
-                age = value;
-            }
+            private set { age = value; }
         }
 
         public decimal Salary
         {
             get => salary;
-            private set
-            {
-                if (salary < 650)
-                {
-                    throw new ArgumentException("Salary cannot be less than 650 leva!");
-                }
-
-                salary = value;
-            }
+            private set { salary = value; }
         }
 
         public void IncreaseSalary(decimal percentage)
