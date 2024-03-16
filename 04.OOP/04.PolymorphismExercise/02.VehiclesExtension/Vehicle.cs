@@ -1,111 +1,43 @@
 ﻿namespace VehiclesExtension
 {
-    public abstract class Vehicle : IDriveable
+    public abstract class Vehicle
     {
-        private double fuelQuantity;
-        private double fuelConsumption;
-        private double tankCapacity;
+        protected double FuelQuantity;
+        protected readonly double FuelConsumptionInLitersPerKm;
+        protected readonly double TankCapacity;
 
-        protected Vehicle(double fuelQuantity, double fuelConsumption, double tankCapacity)
+        protected Vehicle(double fuelQuantity, double fuelConsumptionInLitersPerKm, double tankCapacity, double additionalConsumption)
         {
-            FuelQuantity = fuelQuantity;
-            FuelConsumption = fuelConsumption;
+            if (fuelQuantity > tankCapacity) FuelQuantity = 0;
+            else FuelQuantity = fuelQuantity;
             TankCapacity = tankCapacity;
+            FuelConsumptionInLitersPerKm = fuelConsumptionInLitersPerKm + additionalConsumption;
         }
 
-        public double FuelQuantity
+        public void Drive(double distance)
         {
-            get => fuelQuantity;
-            protected set
+            double fuelNeeded = distance * FuelConsumptionInLitersPerKm;
+
+            if (FuelQuantity - fuelNeeded >= 0)
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Fuel must be a positive number");
-                }
-                else if (value > TankCapacity)
-                {
-                    fuelQuantity = 0;
-                }
-                else
-                {
-                    fuelQuantity = value;
-                }
-            }
-        }
-
-        public double FuelConsumption
-        {
-            get => fuelConsumption;
-            protected set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Fuel must be a positive number");
-                }
-
-                fuelConsumption = value;
-            }
-        }
-
-        public double TankCapacity
-        {
-            get => tankCapacity;
-            protected set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Tank capacity must be positive number");
-                }
-
-                tankCapacity = value;
-
-                if (value < TankCapacity)
-                {
-                    fuelQuantity = value;
-                }
-                else
-
-                {
-                    fuelQuantity = 0;
-                }
-            }
-        }
-
-        public virtual void Drive(double distance)
-        {
-            var total = distance * FuelConsumption;
-
-            if (total > FuelQuantity)
-            {
-                throw new ArgumentException($"{GetType().Name} needs refueling");
-            }
-            else
-            {
-                FuelQuantity -= total;
-
                 Console.WriteLine($"{GetType().Name} travelled {distance} km");
+                FuelQuantity -= fuelNeeded;
             }
+            else Console.WriteLine($"{GetType().Name} needs refueling");
         }
 
-        public virtual void Refuel(double liters)
+        public virtual void Refuel(double fuel)
         {
-            if (liters <= 0)
-            {
-                throw new ArgumentException("Fuel must be a positive number");
-            }
-
-            double totalAfterRefueling = liters + FuelQuantity;
-
-            if (liters <= 0)
+            if (fuel <= 0)
             {
                 Console.WriteLine("Fuel must be a positive number");
-            }
-            if (totalAfterRefueling > TankCapacity)
-            {
-                throw new ArgumentException($"Cannot fit {liters} fuel in the tank");
+                return;
             }
 
-            FuelQuantity += liters;
+            if (FuelQuantity + fuel > TankCapacity) Console.WriteLine($"Cannot fit {fuel} fuel in the tank");
+            else FuelQuantity += fuel;
         }
+
+        public override string ToString() => $"{GetType().Name}: {FuelQuantity:F2}";
     }
 }

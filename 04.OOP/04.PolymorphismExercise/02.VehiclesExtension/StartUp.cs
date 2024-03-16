@@ -4,65 +4,32 @@
     {
         static void Main(string[] args)
         {
-            var carData = Console.ReadLine().Split();
-            var truckData = Console.ReadLine().Split();
-            var busData = Console.ReadLine().Split();
+            double[] carDetails = Console.ReadLine()!.Split()[1..].Select(double.Parse).ToArray();
+            double[] truckDetails = Console.ReadLine()!.Split()[1..].Select(double.Parse).ToArray();
+            double[] busDetails = Console.ReadLine()!.Split()[1..].Select(double.Parse).ToArray();
 
-            Car car = new Car(double.Parse(carData[1]), double.Parse(carData[2]), double.Parse(carData[3]));
-            Truck truck = new Truck(double.Parse(truckData[1]), double.Parse(truckData[2]), double.Parse(truckData[3]));
-            Bus bus = new Bus(double.Parse(busData[1]), double.Parse(busData[2]), double.Parse(busData[3]));
-
-            int commands = int.Parse(Console.ReadLine());
-            for (int i = 0; i < commands; i++)
+            List<Vehicle> vehicles = new()
             {
-                try
-                {
-                    var data = Console.ReadLine().Split();
+                new Car(carDetails[0], carDetails[1], carDetails[2]),
+                new Truck(truckDetails[0], truckDetails[1], truckDetails[2]),
+                new Bus(busDetails[0], busDetails[1], busDetails[2])
+            };
 
-                    if (data[0] == "Drive")
-                    {
-                        if (data[1] == "Car")
-                        {
-                            car.Drive(double.Parse(data[2]));
-                        }
-                        else if (data[1] == "Truck")
-                        {
-                            truck.Drive(double.Parse(data[2]));
-                        }
-                        else if (data[1] == "Bus")
-                        {
-                            bus.DriveWithPeople(double.Parse(data[2]));
-                        }
-                    }
-                    else if (data[0] == "Refuel")
-                    {
-                        if (data[1] == "Car")
-                        {
-                            car.Refuel(double.Parse(data[2]));
-                        }
-                        else if (data[1] == "Truck")
-                        {
-                            truck.Refuel(double.Parse(data[2]));
-                        }
-                        else if (data[1] == "Bus")
-                        {
-                            bus.Refuel(double.Parse(data[2]));
-                        }
-                    }
-                    else if (data[1] == "DriveEmpty")
-                    {
-                        bus.Drive(double.Parse(data[2]));
-                    }
-                }
-                catch (ArgumentException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+            uint commandLinesCount = uint.Parse(Console.ReadLine()!);
+
+            for (int i = 0; i < commandLinesCount; i++)
+            {
+                string[] commandDetails = Console.ReadLine()!.Split();
+                string command = commandDetails[0];
+                string vehicleType = commandDetails[1];
+
+                Vehicle vehicle = vehicles.Find(v => v.GetType().Name == vehicleType)!;
+                if (command == "Drive") vehicle.Drive(double.Parse(commandDetails[2]));
+                else if (command == "Refuel") vehicle.Refuel(double.Parse(commandDetails[2]));
+                else if (command == "DriveEmpty") (vehicle as Bus)!.DriveEmpty(double.Parse(commandDetails[2]));
             }
 
-            Console.WriteLine($"Car: {car.FuelQuantity:f2}");
-            Console.WriteLine($"Truck: {truck.FuelQuantity:f2}");
-            Console.WriteLine($"Bus: {bus.FuelQuantity:f2}");
+            foreach (Vehicle vehicle in vehicles) Console.WriteLine(vehicle);
         }
     }
 }

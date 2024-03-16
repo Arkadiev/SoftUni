@@ -2,22 +2,22 @@
 {
     public class Truck : Vehicle
     {
-        private const double FuelConsumptionModifier = 1.6;
-        private const double TruckerFactor = 0.95;
+        private const double AirConditionerAdditionalConsumption = 1.6;
+        private const double TruckFuelLeak = 0.05;
 
-        public Truck(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)
-            : base(fuelQuantity, fuelConsumptionPerKm + FuelConsumptionModifier, tankCapacity)
-        {
-        }
+        public Truck(double fuelQuantity, double fuelConsumptionInLitersPerKm, double tankCapacity)
+            : base(fuelQuantity, fuelConsumptionInLitersPerKm, tankCapacity, AirConditionerAdditionalConsumption) { }
 
-        public override void Refuel(double fuelAmount)
+        public override void Refuel(double fuel)
         {
-            if (FuelQuantity + fuelAmount > TankCapacity)
+            if (fuel <= 0)
             {
-                throw new ArgumentException($"Cannot fit {fuelAmount} fuel in the tank");
+                Console.WriteLine("Fuel must be a positive number");
+                return;
             }
 
-            base.Refuel(TruckerFactor * fuelAmount);
+            if (FuelQuantity + fuel > TankCapacity) Console.WriteLine($"Cannot fit {fuel} fuel in the tank");
+            else FuelQuantity += fuel * (1 - TruckFuelLeak);
         }
     }
 }

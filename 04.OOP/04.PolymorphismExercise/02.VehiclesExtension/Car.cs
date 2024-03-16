@@ -2,11 +2,9 @@
 {
     public class Car : Vehicle
     {
-        private const double FuelConsumptionModifier = 0.9;
+        private const double AirConditionerAdditionalConsumption = 0.9;
 
-        public Car(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)
-            : base(fuelQuantity, fuelConsumptionPerKm + FuelConsumptionModifier, tankCapacity)
-        {
-        }
+        public Car(double fuelQuantity, double fuelConsumptionInLitersPerKm, double tankCapacity)
+            : base(fuelQuantity, fuelConsumptionInLitersPerKm, tankCapacity, AirConditionerAdditionalConsumption) { }
     }
 }

@@ -2,26 +2,21 @@
 {
     public class Bus : Vehicle
     {
-        public const double ConsumptionModifier = 1.4;
+        private const double AdditionalConsumptionWhenFull = 1.4;
 
-        public Bus(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)
-            : base(fuelQuantity, fuelConsumptionPerKm, tankCapacity)
+        public Bus(double fuelQuantity, double fuelConsumptionInLitersPerKm, double tankCapacity)
+            : base(fuelQuantity, fuelConsumptionInLitersPerKm, tankCapacity, AdditionalConsumptionWhenFull) { }
+
+        public void DriveEmpty(double distance)
         {
-        }
+            double fuelNeeded = distance * (FuelConsumptionInLitersPerKm - AdditionalConsumptionWhenFull);
 
-        public void DriveWithPeople(double distance)
-        {
-            var totalConsumptionPerTravel = distance * (FuelConsumption + ConsumptionModifier);
-
-            if (FuelQuantity >= totalConsumptionPerTravel)
+            if (FuelQuantity - fuelNeeded >= 0)
             {
-                FuelQuantity -= totalConsumptionPerTravel;
-                Console.WriteLine($"Bus travelled {distance} km");
+                Console.WriteLine($"{GetType().Name} travelled {distance} km");
+                FuelQuantity -= fuelNeeded;
             }
-            else
-            {
-                throw new ArgumentException("Bus needs refueling");
-            }
+            else Console.WriteLine($"{GetType().Name} needs refueling");
         }
     }
 }
