@@ -2,15 +2,17 @@
 {
     public class Truck : Vehicle
     {
-        private const double fuelConsumptionModifier = 1.6;
+        private const double FuelConsumptionModifier = 1.6;
+        private const double TruckerFactor = 0.95;
 
-        public Truck(double fuelQuantity, double fuelConsumption) : base(fuelQuantity, fuelConsumption + fuelConsumptionModifier)
+        public Truck(double fuelQuantity, double fuelConsumptionPerKm)
+            : base(fuelQuantity, fuelConsumptionPerKm + FuelConsumptionModifier)
         {
         }
 
-        public override void Refuel(double liters)
+        public override void Refuel(double fuelAmount)
         {
-            base.Refuel(liters * 0.95);
+            base.Refuel(TruckerFactor * fuelAmount);
         }
     }
 }

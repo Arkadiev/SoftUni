@@ -4,38 +4,47 @@
     {
         static void Main(string[] args)
         {
-            string[] carInput = Console.ReadLine().Split();
-            string[] truckInput = Console.ReadLine().Split();
+            var carData = Console.ReadLine().Split();
+            var truckData = Console.ReadLine().Split();
 
-            Car car = new Car(double.Parse(carInput[1]), double.Parse(carInput[2]));
-            Truck truck = new Truck(double.Parse(truckInput[1]), double.Parse(truckInput[2]));
+            Car car = new Car(double.Parse(carData[1]), double.Parse(carData[2]));
+            Truck truck = new Truck(double.Parse(truckData[1]), double.Parse(truckData[2]));
 
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            int commands = int.Parse(Console.ReadLine());
+            for (int i = 0; i < commands; i++)
             {
-                string[] input = Console.ReadLine().Split();
-
-                if (input[0] == "Drive")
+                try
                 {
-                    if (input[1] == "Car")
+                    var data = Console.ReadLine().Split();
+
+                    if (data[0] == "Drive")
                     {
-                        car.Drive(double.Parse(input[2]));
+                        switch (data[1])
+                        {
+                            case "Car":
+                                car.Drive(double.Parse(data[2]));
+                                break;
+                            case "Truck":
+                                truck.Drive(double.Parse(data[2]));
+                                break;
+                        }
                     }
-                    else if (input[1] == "Truck")
+                    else if (data[0] == "Refuel")
                     {
-                        truck.Drive(double.Parse(input[2]));
+                        switch (data[1])
+                        {
+                            case "Car":
+                                car.Refuel(double.Parse(data[2]));
+                                break;
+                            case "Truck":
+                                truck.Refuel(double.Parse(data[2]));
+                                break;
+                        }
                     }
                 }
-                else if (input[0] == "Refuel")
+                catch (ArgumentException ae)
                 {
-                    if (input[1] == "Car")
-                    {
-                        car.Refuel(double.Parse(input[2]));
-                    }
-                    else if (input[1] == "Truck")
-                    {
-                        truck.Refuel(double.Parse(input[2]));
-                    }
+                    Console.WriteLine(ae.Message);
                 }
             }
 
