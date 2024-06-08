@@ -120,11 +120,11 @@ CREATE TABLE Genres (
 
 INSERT INTO Genres (Id, GenreName)
 VALUES
-	(1, 'Ekshan'),
-	(2, 'Komedi'),
-	(3, 'Ujast'),
-	(4, 'MaikaViMrusna'),
-	(5, 'VieSeEbavateSMene')
+	(1, 'Abc'),
+	(2, 'Def'),
+	(3, 'Ghi'),
+	(4, 'Jkl'),
+	(5, 'Mno')
 
 CREATE TABLE Categories (
 	Id INT PRIMARY KEY,
@@ -134,11 +134,11 @@ CREATE TABLE Categories (
 
 INSERT INTO Categories (Id, CategoryName)
 VALUES
-	(1, 'ZaTvaLi'),
-	(2, 'Dadoh500Leva'),
-	(3, 'BeShanajiiSkapani'),
-	(4, 'DaSeUchaSamShtoto'),
-	(5, 'FilipIDonchoSaAutisti')
+	(1, 'Pqr'),
+	(2, 'Stu'),
+	(3, 'Wxy'),
+	(4, 'Z01'),
+	(5, '234')
 
 CREATE TABLE Movies (
 	Id INT PRIMARY KEY,
