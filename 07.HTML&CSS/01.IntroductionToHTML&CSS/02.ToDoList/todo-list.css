@@ -1,0 +1,9 @@
+li:hover {
+    background-color: #e9ecef;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+done li {
+    text-decoration: line-through;
+}

@@ -1,0 +1,15 @@
+h2 {
+    margin-top: 0;
+}
+
+header p {
+    color: #6c757d;
+}
+
+author {
+    font-weight: bold;
+}
+
+time {
+    font-style: italic;
+}
