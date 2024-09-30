@@ -2,12 +2,7 @@
 {
     public class Movie
     {
-        public Movie()
-        {
-            this.Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         public string Title { get; set; } = null!;
 

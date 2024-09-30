@@ -10,7 +10,7 @@ using static CinemaApp.Common.EntityValidationConstants.Movie;
 
 namespace CinemaApp.Data.Configuration
 {
-    public class MovieConfiguration : IEntityTypeConfiguration<Movie>
+	public class MovieConfiguration : IEntityTypeConfiguration<Movie>
     {
         public void Configure(EntityTypeBuilder<Movie> builder)
         {

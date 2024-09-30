@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CinemaApp.Data
 {
-    public class CinemaDbContext : DbContext
+	public class CinemaDbContext : DbContext
     {
         public CinemaDbContext()
         {

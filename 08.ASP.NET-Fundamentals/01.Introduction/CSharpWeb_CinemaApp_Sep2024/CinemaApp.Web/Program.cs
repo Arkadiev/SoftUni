@@ -1,26 +1,27 @@
+using CinemaApp.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace CinemaApp.Web
 {
-    using CinemaApp.Data;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.DependencyInjection;
-
-    public class Program
+	public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-            string connectionString = builder.Configuration.GetConnectionString("SQLServer");
+            string connectionString = builder.Configuration.GetConnectionString("SQLServer")!;
 
             // Add services to the container.
-            builder.Services.AddDbContext<CinemaDbContext>(options =>
+            builder.Services
+                .AddDbContext<CinemaDbContext>(options =>
             {
                 options.UseSqlServer(connectionString);
             });
 
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+            WebApplication app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -41,7 +42,7 @@ namespace CinemaApp.Web
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.Run();
+			app.Run();
         }
     }
 }
