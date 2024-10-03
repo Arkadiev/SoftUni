@@ -1,6 +1,7 @@
 using CinemaApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using CinemaApp.Web.Infrastructure.Extensions;
 
 namespace CinemaApp.Web
 {
@@ -41,6 +42,8 @@ namespace CinemaApp.Web
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.ApplyMigrations();
 
 			app.Run();
         }

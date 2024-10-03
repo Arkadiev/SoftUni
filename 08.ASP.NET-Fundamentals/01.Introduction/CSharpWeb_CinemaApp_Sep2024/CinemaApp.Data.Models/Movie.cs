@@ -1,4 +1,6 @@
-﻿namespace CinemaApp.Data.Models
+﻿using System.Collections;
+
+namespace CinemaApp.Data.Models
 {
     public class Movie
     {
@@ -15,5 +17,7 @@
         public int Duration { get; set; }
 
         public string Description { get; set; } = null!;
+
+        public virtual ICollection<CinemaMovie> MovieCinemas { get; set; } = new HashSet<CinemaMovie>();
     }
 }
