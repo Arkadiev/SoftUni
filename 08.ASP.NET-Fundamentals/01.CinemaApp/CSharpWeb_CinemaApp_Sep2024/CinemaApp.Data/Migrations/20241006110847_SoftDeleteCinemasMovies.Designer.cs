@@ -4,6 +4,7 @@ using CinemaApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaApp.Data.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    partial class CinemaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241006110847_SoftDeleteCinemasMovies")]
+    partial class SoftDeleteCinemasMovies
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,19 +48,19 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("03dbe05e-379f-41f0-81c1-e4a508b28cf1"),
+                            Id = new Guid("086eec92-e4ef-4a1d-876f-e1e9b6773fe8"),
                             Location = "Sofia",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("4e50dc5e-a418-4d01-964c-6c974b22fbc9"),
+                            Id = new Guid("15ec2caf-ac71-4b53-ac02-f6a1ecb346e2"),
                             Location = "Plovdiv",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("64d855ba-ca78-4ef6-9854-381365e9a64f"),
+                            Id = new Guid("3d046b94-ab2b-46c1-baae-310ad0138ceb"),
                             Location = "Varna",
                             Name = "Cinemax"
                         });
@@ -70,6 +73,11 @@ namespace CinemaApp.Data.Migrations
 
                     b.Property<Guid>("MovieId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.HasKey("CinemaId", "MovieId");
 
@@ -117,7 +125,7 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("46d99c36-e9e8-49c9-99df-b8c4bc9fa9d1"),
+                            Id = new Guid("6d5b8697-42cd-4562-a9d1-23336257b8af"),
                             Description = "Description not yet implemented",
                             Director = "Mike Newel",
                             Duration = 157,
@@ -127,7 +135,7 @@ namespace CinemaApp.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("be6a28c8-6337-4508-ae91-294f0be8dbca"),
+                            Id = new Guid("8731ce58-d9c3-4bae-a7ba-affdcafcdcf1"),
                             Description = "Description not yet implemented",
                             Director = "Peter Jackson",
                             Duration = 178,

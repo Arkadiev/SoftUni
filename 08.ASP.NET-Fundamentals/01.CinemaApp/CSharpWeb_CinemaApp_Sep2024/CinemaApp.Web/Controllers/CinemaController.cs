@@ -1,12 +1,14 @@
-﻿using CinemaApp.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+using CinemaApp.Data;
 using CinemaApp.Data.Models;
 using CinemaApp.Web.ViewModels.Cinema;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using CinemaApp.Web.ViewModels.Movie;
 
 namespace CinemaApp.Web.Controllers
 {
-    public class CinemaController : Controller
+    public class CinemaController : BaseController
     {
         private readonly CinemaDbContext dbContext;
 
@@ -63,7 +65,7 @@ namespace CinemaApp.Web.Controllers
         {
 			Guid cinemaGuid = Guid.Empty;
 
-			bool isIdValid = IsCinemaIdValid(id, ref cinemaGuid);
+			bool isIdValid = this.IsGuidValid(id, ref cinemaGuid);
             if (!isIdValid)
             {
                 return this.RedirectToAction(nameof(Index));
@@ -71,6 +73,8 @@ namespace CinemaApp.Web.Controllers
 
 			Cinema? cinema = await this.dbContext
 				.Cinemas
+                .Include(c => c.CinemaMovies)
+                .ThenInclude(cm => cm.Movie)
 				.FirstOrDefaultAsync(c => c.Id == cinemaGuid);
 
 			// Invalid (non-existing) GUID in the URL
@@ -79,25 +83,21 @@ namespace CinemaApp.Web.Controllers
 				return this.RedirectToAction(nameof(Index));
 			}
 
+            CinemaDetailsViewModel viewModel = new CinemaDetailsViewModel()
+            {
+                Name = cinema.Name,
+                Location = cinema.Location,
+                Movies = cinema.CinemaMovies
+                .Where(cm => cm.IsDeleted == false)
+                .Select(cm => new CinemaMovieViewModel()
+                {
+                    Title = cm.Movie.Title,
+                    Duration = cm.Movie.Duration
+                })
+                .ToArray()
+            };
 
-		}
-
-        private bool IsCinemaIdValid(string? id, ref Guid cinemaGuid)
-        {
-			// Non-existing parameter in the URL
-			if (String.IsNullOrWhiteSpace(id))
-			{
-				return false;
-			}
-
-			// Invalid parameter in the URL
-			bool isGuidValid = Guid.TryParse(id, out cinemaGuid);
-			if (!isGuidValid)
-			{
-				return false;
-			}
-
-            return true;
+            return this.View(viewModel);
 		}
     }
 }
