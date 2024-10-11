@@ -1,6 +1,9 @@
-using CinemaApp.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+using CinemaApp.Data;
+using CinemaApp.Data.Models;
 using CinemaApp.Web.Infrastructure.Extensions;
 
 namespace CinemaApp.Web
@@ -16,9 +19,19 @@ namespace CinemaApp.Web
             // Add services to the container.
             builder.Services
                 .AddDbContext<CinemaDbContext>(options =>
-            {
-                options.UseSqlServer(connectionString);
-            });
+                {
+                    options.UseSqlServer(connectionString);
+                });
+
+            builder.Services
+                .AddDefaultIdentity<ApplicationUser>(cfg =>
+                {
+
+                })
+                .AddRoles<IdentityRole<Guid>>()
+                .AddSignInManager<SignInManager<ApplicationUser>>()
+                .AddUserManager<UserManager<ApplicationUser>>()
+				.AddEntityFrameworkStores<CinemaDbContext>();
 
             builder.Services.AddControllersWithViews();
 
@@ -37,11 +50,14 @@ namespace CinemaApp.Web
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            // Authorization can only work if we know who uses the application
+            app.UseAuthentication(); // First -> Who am I?
+            app.UseAuthorization(); // Second -> What can I do?
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages(); // Add routing to Identity Razor Pages
 
             app.ApplyMigrations();
 

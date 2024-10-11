@@ -1,5 +1,6 @@
-﻿using CinemaApp.Web.ViewModels.Cinema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+
+using CinemaApp.Web.ViewModels.Cinema;
 
 using static CinemaApp.Common.EntityValidationConstants.Movie;
 

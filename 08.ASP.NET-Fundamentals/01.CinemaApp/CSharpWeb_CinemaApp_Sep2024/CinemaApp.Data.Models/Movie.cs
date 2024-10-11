@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace CinemaApp.Data.Models
+﻿namespace CinemaApp.Data.Models
 {
     public class Movie
     {
