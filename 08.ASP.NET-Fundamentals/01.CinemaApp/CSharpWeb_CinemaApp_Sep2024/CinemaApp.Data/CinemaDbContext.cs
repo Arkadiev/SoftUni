@@ -25,6 +25,8 @@ namespace CinemaApp.Data
 
         public virtual DbSet<CinemaMovie> CinemaMovies { get; set; } = null!;
 
+        public virtual DbSet<ApplicationUserMovie> UsersMovies { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
