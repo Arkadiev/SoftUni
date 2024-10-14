@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CinemaApp.Common
+﻿namespace CinemaApp.Common
 {
 	public static class EntityValidationConstants
     {
@@ -20,6 +14,8 @@ namespace CinemaApp.Common
             public const int DirectorMaxLength = 80;
             public const int DescriptionMinLength = 50;
             public const int DescriptionMaxLength = 500;
+            public const int ImageUrlMinLength = 8;
+            public const int ImageUrlMaxLength = 2083;
         }
 
         public static class Cinema

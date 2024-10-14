@@ -4,6 +4,7 @@ using CinemaApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaApp.Data.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    partial class CinemaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241012125414_AddUserMovieWishlist")]
+    partial class AddUserMovieWishlist
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,7 +103,7 @@ namespace CinemaApp.Data.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("UsersMovies");
+                    b.ToTable("ApplicationUserMovie");
                 });
 
             modelBuilder.Entity("CinemaApp.Data.Models.Cinema", b =>
@@ -126,19 +129,19 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("94157479-c238-4ac7-9a0f-1946b052f276"),
+                            Id = new Guid("1cf5efa3-97cd-4368-b959-ec4f60361aa9"),
                             Location = "Sofia",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("336fd906-5e3a-49cb-81ff-17b710a05680"),
+                            Id = new Guid("d3e360f0-e043-456a-8a62-9b20fc345bb8"),
                             Location = "Plovdiv",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("536bb177-36eb-4a3e-bc4f-c225687b4634"),
+                            Id = new Guid("126e6ebb-6637-4cf7-9ab7-a617c5960e92"),
                             Location = "Varna",
                             Name = "Cinemax"
                         });
@@ -188,12 +191,6 @@ namespace CinemaApp.Data.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("ImageUrl")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(2083)
-                        .HasColumnType("nvarchar(2083)")
-                        .HasDefaultValue("~/images/no-image.jpg");
-
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
@@ -209,7 +206,7 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("de3bd664-5ea7-4783-932c-ae8a19fed4ff"),
+                            Id = new Guid("93965045-f5f8-4b74-aaf5-839294cc4f5c"),
                             Description = "Description not yet implemented",
                             Director = "Mike Newel",
                             Duration = 157,
@@ -219,7 +216,7 @@ namespace CinemaApp.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a1487906-80ea-488b-8346-73f044c185dc"),
+                            Id = new Guid("03eb4702-a9c7-4062-ba6a-58469bc33bd3"),
                             Description = "Description not yet implemented",
                             Director = "Peter Jackson",
                             Duration = 178,

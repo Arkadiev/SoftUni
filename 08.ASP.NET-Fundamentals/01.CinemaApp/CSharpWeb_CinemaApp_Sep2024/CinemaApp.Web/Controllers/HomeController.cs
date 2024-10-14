@@ -1,5 +1,3 @@
-using System.Diagnostics;
-using CinemaApp.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CinemaApp.Web.Controllers
